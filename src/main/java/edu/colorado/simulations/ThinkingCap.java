@@ -1,4 +1,4 @@
-package net.paperdave.csi2130.thinkingcap;
+package edu.colorado.simulations;
 
 public class ThinkingCap {
     private String red;

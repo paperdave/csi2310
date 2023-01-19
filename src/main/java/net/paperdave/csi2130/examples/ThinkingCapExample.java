@@ -1,11 +1,11 @@
-package net.paperdave.csi2130.thinkingcap;
+package net.paperdave.csi2130.examples;
 
 import edu.colorado.simulations.ThinkingCap;
 import net.paperdave.csi2130.runner.Lab;
 
 import java.time.LocalDate;
 
-public class ThinkingCapExample1 extends Lab {
+public class ThinkingCapExample extends Lab {
     @Override
     public String getName() {
         return "Thinking Cap - Example 1";

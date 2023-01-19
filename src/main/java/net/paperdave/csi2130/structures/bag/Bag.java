@@ -1,19 +1,10 @@
-package net.paperdave.csi2130.structures;
+// Created Date: 2023-01-18
+package net.paperdave.csi2130.structures.bag;
 
 /**
- * A Collection class is a data type that is capable of holding a group of items.
- * In Java, Collection classes can be implemented as a class, along with methods to add, remove, and examine items.
- *
- * This bag is a very basic example of a collection. Inside the bag are some numbers.
- * When you first begin to use a bag, the bag will be empty.
- * We count on this to be the initial state of any bag that we use.
- * Numbers may be added into a bag.
- * The bag can hold many numbers.
- * We can even place the same number more than once.
- * We may remove a number from a bag, But we remove only one number at a time.
- * Another operation is to determine how many numbers are in a bag.
+ * it's a bag of numbers
  */
-public class Bag {
+public class Bag implements IBag {
     private static final int BAG_SIZE = 100;
     private int[] bag;
     private int size;
@@ -28,6 +19,9 @@ public class Bag {
      *  @param item  The item to be added to the bag.
      */
     public void add(int item) {
+        if (size == BAG_SIZE) {
+            throw new BagFullException();
+        }
         bag[size] = item;
         size++;
     }
@@ -64,6 +58,4 @@ public class Bag {
             return true;
         }
     }
-
-    
 }

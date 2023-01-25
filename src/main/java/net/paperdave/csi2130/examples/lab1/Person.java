@@ -1,5 +1,8 @@
 package net.paperdave.csi2130.examples.lab1;
 
+/**
+ * A person. This is a simple class that represents a person for {@link Lab1}
+ */
 class Person {
     private String name;
     private int age;

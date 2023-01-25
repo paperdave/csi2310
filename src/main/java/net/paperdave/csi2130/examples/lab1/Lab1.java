@@ -1,31 +1,20 @@
 package net.paperdave.csi2130.examples.lab1;
 
-import net.paperdave.csi2130.runner.Lab;
+import net.paperdave.csi2130.runner.Example;
 
 import java.time.LocalDate;
 
-public class Lab1 extends Lab {
-    public void run() {
-        Person x = new Person("Tony roberts", 22, 4, true);
-        Person y = new Person("John benjamin", 22, 4, true);
-        Person z = new Person("Tony roberts", 22, 4, true);
-
-        System.out.println(x.getName());
-        System.out.println(y.getName());
-        System.out.println(z.getName());
-    }
-
-    // metadata
-
-    public Lab1() {
-        super();
-    }
+public class Lab1 extends Example {
+    public Lab1() { super(); }
 
     @Override
-    public String getName() {
-        return "Lab 1: Interviewing";
-    }
+    public String getName() { return "Lab 1: Interviewing"; }
 
+    @Override
+    public LocalDate getCreatedDate() {
+        return LocalDate.of(2023, 1, 18);
+    }
+    
     @Override
     public String getDescription() {
         return """
@@ -44,8 +33,12 @@ public class Lab1 extends Lab {
                 """;
     }
 
-    @Override
-    public LocalDate getCreatedDate() {
-        return LocalDate.of(2023, 1, 18);
+    public void run() {
+        Person x = new Person("Tony roberts", 22, 4, true);
+        Person y = new Person("John benjamin", 21, 40, true);
+        Person z = new Person("Samuel Meijers", 592, 237, false);
+        System.out.printf("Person 1 is %s, %d years old, and has %d years of experience.", x.getName(), x.getAge(), x.getYearsOfExperience());
+        System.out.printf("Person 2 is %s, %d years old, and has %d years of experience.", y.getName(), y.getAge(), y.getYearsOfExperience());
+        System.out.printf("Person 3 is %s, %d years old, and has %d years of experience.", z.getName(), z.getAge(), z.getYearsOfExperience());
     }
 }

@@ -2,7 +2,6 @@ package net.paperdave.csi2130.runner;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintStream;
 import java.util.Arrays;
@@ -12,12 +11,12 @@ public class LabRunnerFrame extends JFrame {
     private static final int LIST_WIDTH = 300;
     private static final int BUTTON_HEIGHT = 60;
 
-    private Lab[] labs;
+    private Example[] examples;
 
-    public LabRunnerFrame(Lab[] labs) {
+    public LabRunnerFrame(Example[] examples) {
         super("Dave's CSI 2130 Lab Runner");
 
-        this.labs = labs;
+        this.examples = examples;
 
         // This will be a two column layout using SpringLayout, where the left is a list view,
         // and the right side is the item details, which will be split into two rows, one for
@@ -33,7 +32,7 @@ public class LabRunnerFrame extends JFrame {
         SpringLayout layout = new SpringLayout();
         this.setLayout(layout);
 
-        JList<LabItem> labList = new JList<>(Arrays.stream(labs).map(LabItem::new).toArray(LabItem[]::new));
+        JList<LabItem> labList = new JList<>(Arrays.stream(examples).map(LabItem::new).toArray(LabItem[]::new));
         labList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         labList.setLayoutOrientation(JList.VERTICAL);
         labList.setVisibleRowCount(-1);
@@ -78,7 +77,7 @@ public class LabRunnerFrame extends JFrame {
         labList.addListSelectionListener(e -> {
             LabItem item = labList.getSelectedValue();
             if (item != null) {
-                labDescription.setText(item.lab().getDescription());
+                labDescription.setText(item.example().getDescription());
             } else {
                 labDescription.setText("Select a lab from the left.");
             }
@@ -98,7 +97,7 @@ public class LabRunnerFrame extends JFrame {
                         return labOutput.getText();
                     }
                 }));
-                item.lab().run();
+                item.example().run();
                 System.setOut(stdout);
             } else {
                 labOutput.setText("no lab selected");

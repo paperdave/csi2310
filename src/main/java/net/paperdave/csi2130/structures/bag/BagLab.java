@@ -1,11 +1,11 @@
 // Created Date: 2023-01-18
 package net.paperdave.csi2130.structures.bag;
 
-import net.paperdave.csi2130.runner.Lab;
+import net.paperdave.csi2130.runner.Example;
 
 import java.time.LocalDate;
 
-public class BagLab extends Lab {
+public class BagLab extends Example {
 
     @Override
     public String getName() {

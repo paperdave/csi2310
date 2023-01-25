@@ -1,9 +1,8 @@
 package net.paperdave.csi2130.runner;
 
 import java.time.LocalDate;
-import java.util.GregorianCalendar;
 
-public class HelloWorldLab extends Lab {
+public class HelloWorldExample extends Example {
     @Override
     public String getName() {
         return "Hello World Lab";

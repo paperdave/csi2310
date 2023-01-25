@@ -6,12 +6,12 @@ import javax.swing.*;
 import java.util.Set;
 
 public class LabRunner {
-    public static Lab[] scanForLabs() {
+    public static Example[] scanForLabs() {
         Reflections r = new Reflections("net");
-        Set<Class<? extends Lab>> classes = r.getSubTypesOf(Lab.class);
-        Lab[] labs = new Lab[classes.size()];
+        Set<Class<? extends Example>> classes = r.getSubTypesOf(Example.class);
+        Example[] labs = new Example[classes.size()];
         int i = 0;
-        for (Class<? extends Lab> o : classes) {
+        for (Class<? extends Example> o : classes) {
             try {
                 labs[i] = o.getDeclaredConstructor().newInstance();
             } catch (Exception e) {

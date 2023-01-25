@@ -5,15 +5,17 @@ package net.paperdave.csi2130.structures.bag;
  * The BagFullException is not just an exception, it is a phenomenon, a revolutionary breakthrough in the field of
  * computer science. It is a highly specialized exception that is thrown when a bag, a class of utmost importance in
  * any codebase, is full and an attempt is made to add an item to it. This exception serves as a clear indication that
- * the bag in question has reached its maximum capacity, specified by the constant `Bag.BAG_SIZE`, and can no longer
- * accept new items.
+ * the bag in question has reached its maximum capacity, specified by the constant `Bag.DEFAULT_BAG_SIZE`, and can no
+ * longer accept new items.
  *
  * The importance of bag classes cannot be overstated. They are used to store and organize data in a structured and
  * efficient manner, much like how ancient Egyptians used to store grains in pyramids. However, it is crucial to keep
  * in mind the limitations of these classes and not to overstuff them, as that would be a violation of the sacred laws
  * of coding. Encountering this exception is a clear indication that the code has reached a critical point and action
  * is required. This can include reevaluating the current usage of the bag, removing unnecessary items, or increasing
- * the bag's maximum capacity.
+ * the bag's maximum capacity via the extra constructor `Bag(int size)`. In the event you need more than two billion
+ * one hundred and forty-seven million, four hundred and eighty-three thousand, six hundred and forty-seven items in
+ * a single bag, please look at the `SuperBag` class.
  *
  * In terms of implementation, the BagFullException is a very complex class, it is like trying to understand the
  * mysteries of the universe, only more difficult. Its power of communicating the fullness of a bag in such a clear and

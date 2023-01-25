@@ -6,7 +6,6 @@ public abstract class Example implements Runnable {
     private String name;
     private String description;
     private LocalDate createdDate;
-    private Input[] inputs;
 
     protected void setName(String name) {
         this.name = name;

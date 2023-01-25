@@ -26,7 +26,6 @@ public class LabRunner {
         try {
             UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-
         } catch(Exception ignored){}
 
         new LabRunnerFrame(scanForLabs());
